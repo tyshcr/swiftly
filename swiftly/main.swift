@@ -20,5 +20,5 @@ person.lastname = "James"
 person.age = 31
         
 print("\(person.firstname) \(person.lastname) \(person.age)")
-print("\(person.residence!.state) \(person.residence!.numberOfRooms)")
+print("\(person.residence?.state) \(person.residence?.numberOfRooms)")
 
