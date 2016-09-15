@@ -8,7 +8,7 @@
 
 import Foundation
 
-var person: Person = Person(firstname: "Bernie",lastname: "Kosar",age: 52)!;
+var person: Person = Person(firstname: "Bernie",lastname: "Kosar",age: 52, pets: nil)!;
         
 print("\(person.firstname!) \(person.lastname!) \(person.age!)")
         
