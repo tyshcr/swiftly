@@ -8,13 +8,17 @@
 
 import Foundation
 
-var person: Person = Person(firstname: "Bernie",lastname: "Kosar",age: 52, residence: nil)!;
+var person: Person! = Person(firstname: "Stephen", lastname: "Curry", age: 28, residence: nil)
         
 print("\(person.firstname!) \(person.lastname!) \(person.age!)")
-        
+
+
+let residence: Residence! = Residence(numberOfRooms: 10, state: "Ohio")
+
 person.firstname = "LeBron"
 person.lastname = "James"
 person.age = 31
         
 print("\(person.firstname) \(person.lastname) \(person.age)")
+print("\(person.residence!.state) \(person.residence!.numberOfRooms)")
 
