@@ -18,7 +18,11 @@ let residence: Residence! = Residence(numberOfRooms: 10, state: "Ohio")
 person.firstname = "LeBron"
 person.lastname = "James"
 person.age = 31
+//person.residence = residence
         
 print("\(person.firstname) \(person.lastname) \(person.age)")
-print("\(person.residence?.state) \(person.residence?.numberOfRooms)")
+
+if (person.residence != nil) {
+    print("\(person.residence!.state) \(person.residence!.numberOfRooms)")
+}
 
