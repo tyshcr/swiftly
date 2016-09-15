@@ -13,9 +13,9 @@ class Residence {
     var numberOfRooms: Int
     var state: String
     
-    init?(numberOfRooms: Int, state: String) {
-        self.numberOfRooms = numberOfRooms
-        self.state = state
+    init() {
+        self.numberOfRooms = 10
+        self.state = "Ohio"
     }
     
 }

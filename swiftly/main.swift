@@ -8,21 +8,30 @@
 
 import Foundation
 
-var person: Person! = Person(firstname: "Stephen", lastname: "Curry", age: 28, residence: nil)
+class outputClass {
+    
+    func outputPerson(person: Person!) {
+        print("\(person.firstname) \(person.lastname) \(person.age)")
         
-print("\(person.firstname!) \(person.lastname!) \(person.age!)")
+        if let state = person.residence?.state {
+            print("State: \(state)")
+        }
+        
+        if let rooms = person.residence?.numberOfRooms {
+            print("Rooms: \(rooms)")
+        }
+    }
+    
+}
 
-
-let residence: Residence! = Residence(numberOfRooms: 10, state: "Ohio")
+var person: Person! = Person(firstname: "Stephen", lastname: "Curry", age: 28, residence: nil)
 
 person.firstname = "LeBron"
 person.lastname = "James"
 person.age = 31
-//person.residence = residence
-        
-print("\(person.firstname) \(person.lastname) \(person.age)")
+person.residence = Residence()
 
-if (person.residence != nil) {
-    print("\(person.residence!.state) \(person.residence!.numberOfRooms)")
-}
+let output = outputClass()
+output.outputPerson(person)
+
 
