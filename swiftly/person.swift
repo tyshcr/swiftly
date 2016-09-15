@@ -12,13 +12,13 @@ class Person {
     var firstname: String!
     var lastname: String!
     var age: Int!
-    var pets: Int?
+    var residence: Residence?
     
-    init?(firstname: String, lastname: String, age: Int, pets: Int?) {
+    init?(firstname: String, lastname: String, age: Int, residence: Residence?) {
         self.firstname = firstname
         self.lastname = lastname
         self.age = age
-        self.pets = pets
+        self.residence = residence
         
         if (age<0) {
             return nil;
