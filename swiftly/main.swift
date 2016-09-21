@@ -41,9 +41,19 @@ class outputClass {
         return a + b;
     }
     
+    
     func arrayValues(incomingArray: [Int]) {
         for i in incomingArray {
             print("arrayValue: \(i)")
+        }
+    }
+    
+    
+    func dictionaryValue(dictionary: [String:String], key: String) {
+        if let value = dictionary[key] {
+            print("dictionary value for \(key): \(value)")
+        } else {
+            print("no dictionary value for \(key)")
         }
     }
     
@@ -55,11 +65,15 @@ output.countdown(100)
 output.countup(5)
 print("Addition = \(output.addition(5, b: 6))")
 
-var myArray = [Int]()
-myArray.append(80)
-myArray.append(81)
-myArray.append(82)
-output.arrayValues(myArray)
+var array1 = [Int]()
+array1.append(80)
+array1.append(81)
+array1.append(82)
+output.arrayValues(array1)
+
+var dictionary : [String:String]! = ["A":"Apple","B":"Beets","C":"Cucumber"]
+output.dictionaryValue(dictionary, key: "A")
+output.dictionaryValue(dictionary, key: "D")
 
 /*var person: Person! = Person(firstname: "Stephen", lastname: "Curry", age: 28, residence: nil)
 
