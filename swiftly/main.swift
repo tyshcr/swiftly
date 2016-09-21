@@ -22,16 +22,32 @@ class outputClass {
         }
     }
     
+    
+    func countup(max: Int) {
+        for index in (1...max) {
+            print("\(index)")
+        }
+    }
+    
+    
+    func countdown(max: Int) {
+        for index in (1...max).reverse() {
+            print("\(index)")
+        }
+    }
+    
 }
 
-var person: Person! = Person(firstname: "Stephen", lastname: "Curry", age: 28, residence: nil)
+let output = outputClass()
+
+output.countdown(100)
+output.countup(5)
+
+/*var person: Person! = Person(firstname: "Stephen", lastname: "Curry", age: 28, residence: nil)
 
 person.firstname = "LeBron"
 person.lastname = "James"
 person.age = 31
 person.residence = Residence()
 
-let output = outputClass()
-output.outputPerson(person)
-
-
+output.outputPerson(person)*/
