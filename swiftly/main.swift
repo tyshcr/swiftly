@@ -41,13 +41,25 @@ class outputClass {
         return a + b;
     }
     
+    func arrayValues(incomingArray: [Int]) {
+        for i in incomingArray {
+            print("arrayValue: \(i)")
+        }
+    }
+    
 }
 
 let output = outputClass()
 
 output.countdown(100)
 output.countup(5)
-print("Addition \(output.addition(5, b: 6))")
+print("Addition = \(output.addition(5, b: 6))")
+
+var myArray = [Int]()
+myArray.append(80)
+myArray.append(81)
+myArray.append(82)
+output.arrayValues(myArray)
 
 /*var person: Person! = Person(firstname: "Stephen", lastname: "Curry", age: 28, residence: nil)
 
