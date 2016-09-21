@@ -10,6 +10,8 @@ import Foundation
 
 class outputClass {
     
+    var dictionary: [String:String]? = nil
+    
     func outputPerson(person: Person!) {
         print("\(person.firstname) \(person.lastname) \(person.age)")
         
@@ -49,12 +51,14 @@ class outputClass {
     }
     
     
-    func dictionaryValue(dictionary: [String:String], key: String) {
+    func dictionaryValue(key: String) {
         // optional binding
-        if let value = dictionary[key] {
-            print("dictionary value for \(key): \(value)")
-        } else {
-            print("no dictionary value for \(key)")
+        if let dict = self.dictionary {
+            if let value = dict[key] {
+                print("dictionary value for \(key): \(value)")
+            } else {
+                print("no dictionary value for \(key)")
+            }
         }
     }
     
@@ -79,9 +83,10 @@ array2.append("N")
 array2.append("O")
 output.arrayValues(array2)
 
-var dictionary : [String:String] = ["A":"Apple","B":"Beets","C":"Cucumber"]
-output.dictionaryValue(dictionary, key: "A")
-output.dictionaryValue(dictionary, key: "D")
+var dictionary1 : [String:String] = ["A":"Apple","B":"Beets","C":"Cucumber"]
+output.dictionary = dictionary1
+output.dictionaryValue("A")
+output.dictionaryValue("D")
 
 
 /*var person: Person! = Person(firstname: "Stephen", lastname: "Curry", age: 28, residence: nil)
