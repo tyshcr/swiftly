@@ -36,12 +36,18 @@ class outputClass {
         }
     }
     
+    
+    func addition(a: Int, b: Int) -> Int {
+        return a + b;
+    }
+    
 }
 
 let output = outputClass()
 
 output.countdown(100)
 output.countup(5)
+print("Addition \(output.addition(5, b: 6))")
 
 /*var person: Person! = Person(firstname: "Stephen", lastname: "Curry", age: 28, residence: nil)
 
